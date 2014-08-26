@@ -16,7 +16,7 @@ if [[ -z ${QUERYSTRING} ]]; then
 fi
 
 # Run LDAP query and store raw response
-LDAPRAW=$(ldapsearch -x -h ${LDAPHOSTNAME} -p $LDAPPORT -D ${LDAPUSERNAME} -w ${LDAPPASSWORD} -b "${LDAPSEARCHBASE}" "(sAMAccountName=*${QUERYSTRING}*)")
+LDAPRAW=$(ldapsearch -x -h ${LDAPHOSTNAME} -p $LDAPPORT -D ${LDAPUSERNAME} -w ${LDAPPASSWORD} -b "${LDAPSEARCHBASE}" "(&(sAMAccountName=*${QUERYSTRING}*)(physicalDeliveryOfficeName=*))")
 
 # Count entries and responses
 LDAPENTRIES=$(echo "${LDAPRAW}" | grep "numEntries" | sed 's/\# numEntries: //g')
@@ -34,10 +34,9 @@ IFS="
 
 # Add to arrays
 PHONEARRAY=($(echo "${LDAPRAW}" | sed -n 's/^[ \t ]*telephoneNumber:[ \t ]*\(.*\)/\1/p'))
-NAMEARRAY=($(echo "${LDAPRAW}" | sed -n 's/^[ \t ]*displayName:[ \t ]*\(.*\)/\1/p'))
+NAMEARRAY=($(echo "${LDAPRAW}" | sed -n 's/^[ \t ]*displayName:[ \t ]*\([A-Za-z ]*\)/\1/p'))
 
 # For each array element, display name and phone number
 for i in "${!PHONEARRAY[@]}"; do
-
 	echo "<item uid=\"\" arg=\""${PHONEARRAY[$i]/#$PHONEPREFIX/}"\"><title>"${NAMEARRAY[$i]}" ("${PHONEARRAY[$i]/#$PHONEPREFIX/}")</title><subtitle></subtitle><icon>icon/user.png</icon></item>"
 done
