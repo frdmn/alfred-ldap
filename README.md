@@ -21,5 +21,5 @@ for example
 
 1. Download the raw `alfred-ldap.alfredworkflow` file
 1. Double click to execute and import that workflow into Alfred
-1. Copy the default config file: `cp .alfred-ldap.conf ~/.alfred-ldap.conf`
+1. Copy the default config file out of this git repo into your $HOME
 1. Adjust the credentials to the LDAP server
