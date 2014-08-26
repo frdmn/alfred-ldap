@@ -9,6 +9,10 @@ Alfred workflow to search for telephone numbers of coworkers through an Active D
 
 `tel Firstname [Lastname]`  
 
+for example
+
+`tel Jonas` or `tel Friedm`
+
 #### Result (also sent to your clipboard)
 
 `> Jonas Friedmann (869)`  
