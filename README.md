@@ -5,13 +5,15 @@ Alfred workflow to search for telephone numbers of coworkers through an Active D
 
 ![](http://up.frd.mn/eklpc.png)
 
+![](http://up.frd.mn/ZIoKs.png)
+
 ## Usage
 
 `tel Firstname [Lastname]`  
 
 for example
 
-`tel Jonas` or `tel Friedm`
+`tel Jonas` or `tel Friedm` as well as `tel 869`
 
 #### Result (also sent to your clipboard)
 
