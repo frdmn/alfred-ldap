@@ -34,7 +34,7 @@ IFS="
 
 # Add to arrays
 PHONEARRAY=($(echo "${LDAPRAW}" | sed -n 's/^[ \t ]*telephoneNumber:[ \t ]*\(.*\)/\1/p'))
-NAMEARRAY=($(echo "${LDAPRAW}" | sed -n 's/^[ \t ]*displayName:[ \t ]*\([A-Za-z ]*\)/\1/p'))
+NAMEARRAY=($(echo "${LDAPRAW}" | sed -n 's/^[ \t ]*sAMAccountName:[ \t ]*\([A-Za-z ]*\)/\1/p' | sed 's/\./ /g'))
 
 # For each array element, display name and phone number
 for i in "${!PHONEARRAY[@]}"; do
