@@ -21,11 +21,13 @@ for example
 
 ## Installation
 
-1. Download the raw `alfred-ldap.alfredworkflow` file
+1. Download the raw [`alfred-ldap.alfredworkflow`](https://github.com/frdmn/alfred-ldap/releases) file from GitHub releases
 1. Double click to execute and import that workflow into Alfred
-1. Clone the repository to get access to the dotfile configuration (`.alfred-ldap.conf`):  
-`git clone https://github.com/frdmn/alfred-ldap /tmp/alfred-ldap`
-1. Copy the default config file out of this git repo into your $HOME:  
-`cp /tmp/alfred-ldap/.alfred-ldap.conf ~/.alfred-ldap.conf`
+1. Copy the default config file `.alfred-ldap.conf` into your home folder:  
+`git clone https://github.com/frdmn/alfred-ldap /tmp/alfred-ldap && cp /tmp/alfred-ldap/.alfred-ldap.conf ~/.alfred-ldap.conf`
 1. Adjust the credentials to the LDAP server:  
 `vi ~/.alfred-ldap.conf`
+
+## Version
+
+0.1.1
