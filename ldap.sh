@@ -16,7 +16,7 @@ if [[ -z ${QUERYSTRING} ]]; then
 fi
 
 # Run LDAP query and store raw response
-LDAPRAW=$(ldapsearch -x -h ${LDAPHOSTNAME} -p $LDAPPORT -D ${LDAPUSERNAME} -w ${LDAPPASSWORD} -b "${LDAPSEARCHBASE}" "(&(sAMAccountName=*${QUERYSTRING}*)(physicalDeliveryOfficeName=*))")
+LDAPRAW=$(ldapsearch -x -h ${LDAPHOSTNAME} -p $LDAPPORT -D ${LDAPUSERNAME} -w ${LDAPPASSWORD} -b "${LDAPSEARCHBASE}" "(|(&(sAMAccountName=*${QUERYSTRING}*)(physicalDeliveryOfficeName=*))(&(telephoneNumber=*${QUERYSTRING}*)(physicalDeliveryOfficeName=*)))")
 
 # Count entries and responses
 LDAPENTRIES=$(echo "${LDAPRAW}" | grep "numEntries" | sed 's/\# numEntries: //g')
