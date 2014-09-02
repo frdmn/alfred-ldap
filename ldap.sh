@@ -38,5 +38,5 @@ NAMEARRAY=($(echo "${LDAPRAW}" | sed -n 's/^[ \t ]*sAMAccountName:[ \t ]*\([A-Za
 
 # For each array element, display name and phone number
 for i in "${!PHONEARRAY[@]}"; do
-	echo "<item uid=\"\" arg=\""${PHONEARRAY[$i]/#$PHONEPREFIX/}"\"><title>"${NAMEARRAY[$i]}" ("${PHONEARRAY[$i]/#$PHONEPREFIX/}")</title><subtitle></subtitle><icon>icon/user.png</icon></item>"
+	echo "<item uid=\"${i}\" arg=\""${PHONEARRAY[$i]/#$PHONEPREFIX/}"\"><title>"${NAMEARRAY[$i]}" ("${PHONEARRAY[$i]/#$PHONEPREFIX/}")</title><subtitle></subtitle><icon>icon/user.png</icon></item>"
 done
