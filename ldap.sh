@@ -24,7 +24,7 @@ LDAPRESPONSES=$(echo "${LDAPRAW}" | grep "numResponses" | sed 's/\# numResponses
 
 # Check for empty entries
 if [[ -z ${LDAPENTRIES} ]]; then
-	echo "Error: No one found for '${QUERYSTRING}'"
+	echo "<item uid=\"0\" arg=\"err404\"><title>Couldn't find \""${QUERYSTRING}\""</title><subtitle></subtitle><icon>icon/user.png</icon></item>"
 	exit 1
 fi
 
