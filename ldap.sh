@@ -3,8 +3,8 @@
 # Read LDAP configuration/settings
 source ${HOME}/.alfred-ldap.conf
 
-# Store arguments in variable
-QUERYSTRING="${*}"
+# Store arguments in variable and replace spaces with dots
+QUERYSTRING="${*// /.}"
 
 # Incremential helper
 i=0
