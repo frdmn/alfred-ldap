@@ -1,8 +1,3 @@
-### 0.1.3 Development
-[Full Changelog](https://github.com/frdmn/alfred-ldap/compare/0.1.2..master)
-
-* *nothing yet*
-
 ### 0.1.2 / 09/02/2014
 [Full Changelog](https://github.com/frdmn/alfred-ldap/compare/0.1.1..0.1.2)
 
