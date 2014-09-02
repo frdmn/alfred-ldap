@@ -1,7 +1,7 @@
 ### 0.1.4 Development
 [Full Changelog](https://github.com/frdmn/alfred-ldap/compare/0.1.4..master)
 
-* *nothing yet*
+* Encode plain text password in settings file in base64
 
 ### 0.1.3 / 09/02/2014
 [Full Changelog](https://github.com/frdmn/alfred-ldap/compare/0.1.2...0.1.3)
