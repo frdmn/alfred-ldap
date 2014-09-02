@@ -17,6 +17,13 @@ fi
 
 # Run LDAP query and store raw response
 LDAPRAW=$(ldapsearch -x -h ${LDAPHOSTNAME} -p $LDAPPORT -D ${LDAPUSERNAME} -w ${LDAPPASSWORD} -b "${LDAPSEARCHBASE}" "(|(&(sAMAccountName=*${QUERYSTRING}*)(physicalDeliveryOfficeName=*))(&(telephoneNumber=*${QUERYSTRING}*)(physicalDeliveryOfficeName=*)))")
+LDAPSTATUS=$?
+
+if [[ $LDAPSTATUS -ne 0 ]]; then
+	echo "<item uid=\"0\" arg=\"err503\"><title>Couldn't connect to LDAP server \""${LDAPHOSTNAME}:${LDAPPORT}\"".</title><subtitle></subtitle><icon>icon/user.png</icon></item>"
+	echo "<item uid=\"1\" arg=\"err503\"><title>Please check the credentials in \"~/.alfred-ldap\"</title><subtitle></subtitle><icon>icon/user.png</icon></item>"
+	exit 1
+fi
 
 # Count entries and responses
 LDAPENTRIES=$(echo "${LDAPRAW}" | grep "numEntries" | sed 's/\# numEntries: //g')
