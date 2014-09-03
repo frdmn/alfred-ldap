@@ -31,3 +31,7 @@ for example
 ## Version
 
 0.1.3
+
+## License
+
+[WTFPL](LICENSE)
