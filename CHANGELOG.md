@@ -1,5 +1,11 @@
-### 0.1.4 Development
-[Full Changelog](https://github.com/frdmn/alfred-ldap/compare/0.1.4..master)
+### 0.1.5
+[Full Changelog](https://github.com/frdmn/alfred-ldap/compare/0.1.4...0.1.5)
+
+* Improve LDAP search path
+* Switch license to MIT
+
+### 0.1.4
+[Full Changelog](https://github.com/frdmn/alfred-ldap/compare/0.1.3...0.1.4)
 
 * Encode plain text password in settings file in base64
 * Add license
