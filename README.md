@@ -34,4 +34,4 @@ for example
 
 ## License
 
-[WTFPL](LICENSE)
+[MIT](LICENSE)
