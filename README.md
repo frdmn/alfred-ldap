@@ -9,11 +9,12 @@ Alfred workflow to search for telephone numbers of coworkers through an Active D
 
 ## Usage
 
-`tel Firstname [Lastname]`  
+`ldap [first <last_name>]`  
+`ldap [phone_number]`  
 
 for example
 
-`tel Jonas` or `tel Friedm` as well as `tel 869`
+`ldap Jonas` or `ldap Friedm` as well as `ldap 869`
 
 #### Result (also sent to your clipboard)
 
