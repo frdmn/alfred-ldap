@@ -1,3 +1,9 @@
+### 0.1.6
+[Full Changelog](https://github.com/frdmn/alfred-ldap/compare/0.1.5...0.1.6)
+
+* Switch defaut workflow keyword to `ldap`
+* Improve installation instructions
+
 ### 0.1.5
 [Full Changelog](https://github.com/frdmn/alfred-ldap/compare/0.1.4...0.1.5)
 
