@@ -9,8 +9,8 @@ Alfred workflow to search for telephone numbers of coworkers through an Active D
 
 ## Usage
 
-`ldap [first <last_name>]`  
-`ldap [phone_number]`  
+`ldap [first <last_name>]`
+`ldap [phone_number]`
 
 for example
 
@@ -18,16 +18,28 @@ for example
 
 #### Result (also sent to your clipboard)
 
-`> Jonas Friedmann (869)`  
+`> Jonas Friedmann (869)`
 
 ## Installation
 
-1. Download the raw [`alfred-ldap.alfredworkflow`](https://github.com/frdmn/alfred-ldap/releases) file from GitHub releases
-1. Double click to execute and import that workflow into Alfred
-1. Copy the default config file `.alfred-ldap.conf` into your home folder:  
-`curl -s https://raw.githubusercontent.com/frdmn/alfred-ldap/master/.alfred-ldap.conf -o ~/.alfred-ldap.conf`
-1. Adjust the credentials to the LDAP server:  
-`vi ~/.alfred-ldap.conf`
+1. Make sure you've met all requirements
+2. Install the workflow with `npm`:
+
+    ```shell
+    npm install -g alfred-ldap
+    ```
+
+3. Copy and adjust the default configuration file and make sure your LDAP credentials are set:
+
+    ```shell
+    cp ~/Library/Application\ Support/Alfred\ 3/Alfred.alfredpreferences/workflows/alfred-ldap/.alfred-ldap.conf ~/.alfred-ldap.conf
+    vi ~/.alfred-ldap.conf
+    ```
+
+
+## Requirements
+
+- Node / NPM
 
 ## Version
 
