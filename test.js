@@ -3,12 +3,14 @@ import alfyTest from 'alfy-test';
 
 test(async t => {
 	const alfy = alfyTest();
-	const result = await alfy('Rainbow');
+	const result = await alfy('');
 
 	t.deepEqual(result, [
 		{
-			title: 'Unicorn',
-			subtitle: 'Rainbow'
+			title: 'Error: No search results for ""',
+			icon: {
+				path: '/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/AlertStopIcon.icns'
+			}
 		}
 	]);
 });

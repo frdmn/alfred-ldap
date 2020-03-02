@@ -31,7 +31,7 @@ async function main() {
 	const searchResult = await ldap.search(filter, attributes);
 	let alfyOutput;
 
-	if(searchResult.length === 0){
+	if (searchResult.length === 0) {
 		alfyOutput = [{
 			title: `Error: No search results for "${alfy.input}"`,
 			icon: {
