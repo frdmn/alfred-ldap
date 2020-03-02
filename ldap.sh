@@ -27,7 +27,6 @@ fi
 
 # Count entries and responses
 LDAPENTRIES=$(echo "${LDAPRAW}" | grep "numEntries" | sed 's/\# numEntries: //g')
-LDAPRESPONSES=$(echo "${LDAPRAW}" | grep "numResponses" | sed 's/\# numResponses: //g')
 
 # Check for empty entries
 if [[ -z ${LDAPENTRIES} ]]; then
