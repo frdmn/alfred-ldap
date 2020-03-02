@@ -18,7 +18,7 @@
     <key>disabled</key>
     <false/>
     <key>name</key>
-    <string>alfred-ldap</string>
+    <string>LDAP Contact Search</string>
     <key>objects</key>
     <array>
       <dict>
