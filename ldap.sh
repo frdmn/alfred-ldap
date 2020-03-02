@@ -16,7 +16,7 @@ if [[ -z ${QUERYSTRING} ]]; then
 fi
 
 # Run LDAP query and store raw response
-LDAPRAW=$(ldapsearch -x -h ${LDAPHOSTNAME} -p $LDAPPORT -D ${LDAPUSERNAME} -w ${LDAPPASSWORD} -b "${LDAPSEARCHBASE}" "(|(&(sAMAccountName=*${QUERYSTRING}*)(objectClass=organizationalPerson))(&(telephoneNumber=*${QUERYSTRING}*)(objectClass=organizationalPerson)))")
+LDAPRAW=$(ldapsearch -x -h "${LDAPHOSTNAME}" -p ${LDAPPORT} -D "${LDAPUSERNAME}" -w "${LDAPPASSWORD}" -b "${LDAPSEARCHBASE}" "(|(&(sAMAccountName=*${QUERYSTRING}*)(objectClass=organizationalPerson))(&(telephoneNumber=*${QUERYSTRING}*)(objectClass=organizationalPerson)))")
 LDAPSTATUS=$?
 
 if [[ $LDAPSTATUS -ne 0 ]]; then
@@ -31,7 +31,7 @@ LDAPRESPONSES=$(echo "${LDAPRAW}" | grep "numResponses" | sed 's/\# numResponses
 
 # Check for empty entries
 if [[ -z ${LDAPENTRIES} ]]; then
-	echo "<item uid=\"0\" arg=\"err404\"><title>Couldn't find \""${QUERYSTRING}\""</title><subtitle></subtitle><icon>icon/user.png</icon></item>"
+	echo "<item uid=\"0\" arg=\"err404\"><title>Couldn't find \"${QUERYSTRING}\"</title><subtitle></subtitle><icon>icon/user.png</icon></item>"
 	exit 1
 fi
 
