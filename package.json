@@ -1,6 +1,6 @@
 {
   "name": "alfred-ldap",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "description": "Lookup names and telephone numbers within an LDAP (AD) directory",
   "license": "MIT",
   "repository": "frdmn/alfred-ldap",
