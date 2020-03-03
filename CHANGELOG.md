@@ -1,3 +1,8 @@
+### 0.2.1
+[Full Changelog](https://github.com/frdmn/alfred-ldap/compare/0.2.0...0.2.1)
+
+* Update LDAP filter to exclude obects without `telephoneNumber` attribute
+
 ### 0.2.0
 [Full Changelog](https://github.com/frdmn/alfred-ldap/compare/0.1.6...0.2.0)
 
