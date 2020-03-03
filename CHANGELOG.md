@@ -1,3 +1,8 @@
+### 0.2.0
+[Full Changelog](https://github.com/frdmn/alfred-ldap/compare/0.1.6...0.2.0)
+
+* Complete rewrite in NodeJS and with [Alfy](https://github.com/sindresorhus/alfy)
+
 ### 0.1.6
 [Full Changelog](https://github.com/frdmn/alfred-ldap/compare/0.1.5...0.1.6)
 
