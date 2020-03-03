@@ -24,7 +24,7 @@ async function main() {
 	const ldap = new SimpleLDAP(config);
 
 	// setup a filter and attributes for your LDAP query
-	const filter = `(&(objectClass=organizationalPerson)(|(telephoneNumber=*${alfy.input}*)(sAMAccountName=*${alfy.input}*)))`;
+	const filter = `(&(objectClass=organizationalPerson)(!(objectclass=computer))(telephoneNumber=*)(|(telephoneNumber=*${alfy.input}*)(sAMAccountName=*${alfy.input}*)))`;
 	const attributes = ['givenName', 'sn', 'telephoneNumber', 'department'];
 
 	// Search in LDAP and store results
