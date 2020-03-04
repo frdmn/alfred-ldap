@@ -10,7 +10,7 @@
     "url": "https://frd.mn"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=7.6"
   },
   "scripts": {
     "test": "xo && ava",
@@ -35,6 +35,6 @@
   "devDependencies": {
     "alfy-test": "^0.4.0",
     "ava": "^3.5.0",
-    "xo": "^0.17.0"
+    "xo": "^0.27.2"
   }
 }
