@@ -1,5 +1,5 @@
-import test from 'ava';
+const test = require('ava');
 
-test(t => {
+test('initialte workflow', t => {
 	t.pass();
 });
